@@ -17,7 +17,7 @@
     forAllSystems = f: nixpkgs.lib.genAttrs systems (system: f system);
   in
   {
-    nixosModules.default = { config, lib, pkgs, ... }: {
+    nixosModules.default = { lib, pkgs, ... }: {
       imports = [ ./modules/comfy-containers.nix ];
 
       # Provide defaults at the module boundary so host configs stay clean.
